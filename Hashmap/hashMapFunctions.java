@@ -1,6 +1,5 @@
 import java.util.HashMap;
 import java.util.Map.Entry;
-import java.io.*;
 
 public class hashMapFunctions {
     public static void main(String[] args) {
