@@ -1,1 +1,0 @@
-<a href="https://diana-adrianne.com/purecss-lace/">Click here</a>

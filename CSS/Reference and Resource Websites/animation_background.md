@@ -1,1 +1,0 @@
-https://www.sliderrevolution.com/resources/css-animated-background/
