@@ -1,0 +1,3 @@
+Hello this is Kenshi2727 aka Abhishek Mathur. This is my repositiry where I will daily upadte the codes for frontend.This readme will be upadted frequently.
+
+The HTML resource section is completed.The CSS section is started.Date-May 13,2024.
