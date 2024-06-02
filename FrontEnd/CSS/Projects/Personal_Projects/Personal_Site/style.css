@@ -1,0 +1,25 @@
+.upper{
+    background-color: #FFF9D0;
+}
+
+.profile{
+    background-color: #CAF4FF;
+}
+
+.profilepic{
+    border-radius: 50%;
+}
+
+.skills{
+    background-color: #A0DEFF;
+}
+
+.libre-baskerville-bold {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .projects{
+    background-color: #5AB2FF;
+  }
