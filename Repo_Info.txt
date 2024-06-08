@@ -1,3 +1,13 @@
+============================================================================================================================================================
 Hello this is Kenshi2727 aka Abhishek Mathur. This is my repositiry where I will daily upadte the codes for frontend.This readme will be upadted frequently.
+============================================================================================================================================================
 
-The HTML resource section is completed.The CSS sectio is started.Date-May 13,2024.
+
+The HTML resource section is completed.The CSS section is started.Date-May 13,2024.
+
+The CSS section is completed but further css codes will be pushed later on when combining it with javascript.
+
+Javascript section will contain codes that will range from basic to advanced level. Mastering Js is essential for backend and frontend Development.
+
+
+The tech stack for this github repository will be released soon.  
