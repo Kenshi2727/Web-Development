@@ -225,3 +225,81 @@ html,body{
     width:300px;
     height: 200px;
 }
+
+.container main .playlist{
+    margin-top: 14px;
+    display: flex;
+    gap: 20px;
+}
+
+.container main .playlist .genres{
+    color: #fff;
+    background-color: #202026;
+    padding:20px;
+    border-radius: 8px;
+    width: 40%;
+}
+
+.container main .playlist .genres .header,
+.container main .playlist .music-list .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.container main .playlist .genres .header a,
+.container main .playlist .music-list .header a{
+    color: #919191;
+    font-size: 12px;
+}
+
+.container main .playlist .genres .items{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:10px;
+}
+
+.container main .playlist .genres .items .item{
+    padding:22px 10px;
+    /* background-color:chartreuse;    */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+
+}
+
+.container main .playlist .genres .items .item p{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.container main .playlist .genres .items .item:nth-child(1){
+    background-color:#476a8a
+}
+
+.container main .playlist .genres .items .item:nth-child(2){
+    background-color:#f7a072
+}
+
+.container main .playlist .genres .items .item:nth-child(3){
+    background-color:#f7d072
+}
+
+.container main .playlist .genres .items .item:nth-child(4){
+    background-color:#f77272
+}
+
+.container main .playlist .genres .items .item:nth-child(5){
+    background-color:#72f7a0
+}
+
+.container main .playlist .genres .items .item:nth-child(6){
+    background-color:#72f7d0
+}
+
+.container main .playlist .music-list .items .item .info img{
+    width: 50px;
+}
