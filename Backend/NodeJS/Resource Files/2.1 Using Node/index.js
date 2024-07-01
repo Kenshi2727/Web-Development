@@ -1,0 +1,1 @@
+console.log("Kenshi is the best!");
