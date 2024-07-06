@@ -12,6 +12,9 @@ const port = 3000;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/", (req, res) => res.sendFile(__dirname + "/public/index.html"));
+/*
+We can also create a custom middleware for authorization which will check if the password is correct or not and return true or false.
+*/
 app.post("/check", (req, res) => {
     if (req.body.password === "ILoveProgramming")
         res.sendFile(__dirname + "/public/secret.html");
