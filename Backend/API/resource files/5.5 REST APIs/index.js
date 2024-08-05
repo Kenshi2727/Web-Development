@@ -35,24 +35,74 @@ app.post("/get-secret", async (req, res) => {
 
 app.post("/post-secret", async (req, res) => {
   // TODO 2: Use axios to POST the data from req.body to the secrets api servers.
-  
+  try{
+  const result=await axios({
+    method: 'post',
+    url: API_URL + "/secrets",
+    data: {
+      "secret":req.body.secret,
+      "score":req.body.score
+    }
+  },config);
+  res.render("index.ejs", { content: JSON.stringify(result.data) });
+}
+catch (error) {
+  res.render("index.ejs", { content: JSON.stringify(error.response.data) });
+}
 });
 
 app.post("/put-secret", async (req, res) => {
   const searchId = req.body.id;
   // TODO 3: Use axios to PUT the data from req.body to the secrets api servers.
+  try{
+  axios({
+    method: 'put',
+    url: API_URL + "/secrets/"+searchId,
+    data: {
+      "secret":req.body.secret,
+      "score":req.body.score
+    }
+  });
+  res.render("index.ejs", { content: "Waiting for data..." });
+}
+catch (error) {
+  res.render("index.ejs", { content: JSON.stringify(error.response.data) });
+}
 });
 
 app.post("/patch-secret", async (req, res) => {
   const searchId = req.body.id;
   // TODO 4: Use axios to PATCH the data from req.body to the secrets api servers.
+  try{
+  axios({
+    method: 'patch',
+    url: API_URL + "/secrets/"+searchId,
+    data: {
+      "secret":req.body.secret,
+      "score":req.body.score
+    }
+  });
+  res.render("index.ejs", { content: "Waiting for data..." });
+}
+catch (error) {
+  res.render("index.ejs", { content: JSON.stringify(error.response.data) });
+}
 });
 
 app.post("/delete-secret", async (req, res) => {
   const searchId = req.body.id;
   // TODO 5: Use axios to DELETE the item with searchId from the secrets api servers.
+  try{
+  axios({
+    method: 'delete',
+    url: API_URL + "/secrets/"+searchId,
+  });
+  res.render("index.ejs", { content: "Waiting for data..." });
+}
+catch (error) {
+  res.render("index.ejs", { content: JSON.stringify(error.response.data) });
+}
 });
-
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
