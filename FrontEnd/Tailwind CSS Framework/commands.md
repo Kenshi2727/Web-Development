@@ -1,0 +1,4 @@
+```
+npx tailwindcss init --full
+
+```
