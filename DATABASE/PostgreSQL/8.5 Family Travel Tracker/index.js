@@ -9,7 +9,7 @@ const db = new pg.Client({
   user: "postgres",
   host: "localhost",
   database: "world",
-  password: "123456",
+  password: "spiralhelix27",
   port: 5432,
 });
 db.connect();
@@ -65,7 +65,29 @@ app.post("/add", async (req, res) => {
     console.log(err);
   }
 });
-app.post("/user", async (req, res) => {});
+app.post("/user", async (req, res) => {
+  console.log(req.body)
+  const user_id=req.body.user;
+  const data=await db.query("select country_code from visited_countries where user_id=$1",[user_id]);
+  // console.log(data.rows);
+  let countries=[];
+  // let users=[];
+  data.rows.forEach((country)=>countries.push(country.country_code));
+  const color=await db.query("select color from users where id=$1",[user_id]);
+  // const name=await db.query("select name from users where id=$1",[user_id]);
+  const user_color=color.rows[0].color;
+  // const user_name=name.rows[0].name;
+  // users.push({
+  //           id:user_id,
+  //           name:user_name,
+  //           color:user_color
+  //           })
+  //           console.log("color-->",color.rows[0].color);
+  const test=console.log(await db.query("select * from users"));
+  const users_data=await db.query("select * from users");
+  const users=users_data.rows;
+  res.render('index.ejs',{countries:countries,total:countries.length,users:users,color:user_color})
+});
 
 app.post("/new", async (req, res) => {
   //Hint: The RETURNING keyword can return the data that was inserted.
