@@ -1,6 +1,0 @@
-============================================================================================================================================================
-Hello this is Kenshi2727 aka Abhishek Mathur. This is my repository where I will daily update the codes for Web Development.This readme will be updated frequently.
-============================================================================================================================================================
-
-
-Currently we are working on Postgres. Soon we will start React Framework thereby ending our basic fullstack technologies.   
