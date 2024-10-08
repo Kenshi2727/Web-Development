@@ -84,6 +84,8 @@ app.post("/add", async (req, res) => {
         res.redirect("/");
     } catch (err) {
         console.log(err);
+        alert("Country already added!");
+        res.redirect("/");
     }
     } catch (err) {
     console.log(err);
