@@ -1,2 +1,2 @@
 # Great applications are often made by devs embracing imperfections......
-<img src="Repo Assets/WEB-AI-1.jpg" width="1006">
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<404>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
