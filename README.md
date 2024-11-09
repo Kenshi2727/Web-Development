@@ -1,2 +1,2 @@
 # Great applications are often made by devs embracing imperfections......
-<img src="https://5.imimg.com/data5/ECOM/Default/2023/4/304365819/EN/RA/XH/188906992/front-64496447355f0-mouse-pad-500x500.jpg" width="1006">
+<img src="Repo Assets/WEB-AI-1.jpg" width="1006">
