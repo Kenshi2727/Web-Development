@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="src/output.css" />
     <title>PageWhisper</title>
   </head>
-  <body class="text-white bg-[url('/images/background2.png')] bg-fixed  bg-cover">
+  <body class="text-white bg-[url('/images/background.png')] bg-fixed  bg-cover">
     <div class="cotainer m-2 flex">
       <div class="logo w-20 h-12">
         <div class="book-animation perspective-distant">
@@ -76,7 +76,7 @@
             
             <form
                 class="w-[100%] my-2 py-4 flex justify-center"
-                action="/add"
+                action="/edit-note"
                 method="post"
             >
                 <input
@@ -85,16 +85,22 @@
                 name="new-title"
                 placeholder="Enter title here📝"
                 id="new-title"
+                <% if(title){ %> 
+                value="<%= title %>"
+                <% } %>
                 />
             </div>
             <div class="add-note w-[70%] mx-2">
-                <textarea
-                class="bg-transparent resize-none text-xl w-[80%] h-[30vh] p-3 rounded-xl focus:outline-none placeholder-[#fff] text-center  text-white shadow-[0px_0px_12px_6px_rgba(255,255,255,0.6)]"
+                <input
+                class="bg-transparent text-xl w-[80%] h-[30vh] p-3 rounded-xl focus:outline-none placeholder-[#fff] text-center text-white shadow-[0px_0px_12px_6px_rgba(255,255,255,0.6)]"
                 type="text"
                 name="new-note"
                 placeholder="Write your note here📒"
                 id="new-note"
-                ></textarea>
+                <% if(note){ %> 
+                value="<%= note %>"
+                <% } %>
+                />
             </form>
                 
             <script>
@@ -121,7 +127,6 @@
                 }
               });
             </script>
-        
           </div>
         
       </div>
