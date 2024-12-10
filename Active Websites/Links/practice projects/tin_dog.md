@@ -1,1 +1,0 @@
-<a href="https://kenshi2727.github.io/Tin-Dog-Project/">Click here, my baby dog!!!</a>

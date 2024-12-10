@@ -1,1 +1,0 @@
-<a href="https://kenshi2727.github.io/Simon-Game/">Click here to play and test your memory!</a>
