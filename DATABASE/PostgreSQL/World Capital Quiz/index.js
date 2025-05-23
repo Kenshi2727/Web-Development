@@ -1,17 +1,19 @@
 import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
+import dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
 const port = 3000;
 
 //client object
-const db=new pg.Client({
-  user:"postgres",
-  host:"localhost",
-  database:"world",
-  password:"27",
-  port:5432,
+const db = new pg.Client({
+  user: "postgres",
+  host: "localhost",
+  database: "world",
+  password: process.env.DB_PASSWORD,
+  port: 5432,
 });
 
 db.connect();
@@ -23,12 +25,12 @@ let quiz = [
   { country: "United States of America", capital: "New York" },
 ];
 
-db.query("SELECT * FROM capitals",(err,res)=>{
-  if(err){
-    console.log("Error executing the query!",err.stack);
+db.query("SELECT * FROM capitals", (err, res) => {
+  if (err) {
+    console.log("Error executing the query!", err.stack);
   }
-  else{
-    quiz=res.rows;//quiz now replaced with an array of records from our database
+  else {
+    quiz = res.rows;//quiz now replaced with an array of records from our database
   }
   db.end();
 });

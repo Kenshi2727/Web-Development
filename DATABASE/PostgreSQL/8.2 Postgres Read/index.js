@@ -1,27 +1,30 @@
 import express from "express";
 import bodyParser from "body-parser";
 import pg from 'pg';
+import dotenv from "dotenv";
+dotenv.config();
 
-let quiz=[];
+
+let quiz = [];
 
 const app = express();
 const port = 3000;
-const db=new pg.Client({
-  user:"postgres",
-  host:"localhost",
-  database:"world",
-  password:"spiralhelix27",
-  port:5432,
+const db = new pg.Client({
+  user: "postgres",
+  host: "localhost",
+  database: "world",
+  password: process.env.DB_PASSWORD,
+  port: 5432,
 });
 
 db.connect();
 
-db.query("SELECT * FROM flags",(err,res)=>{
-  if(err){
-    console.log("Error while fetching query!",err.stack);
+db.query("SELECT * FROM flags", (err, res) => {
+  if (err) {
+    console.log("Error while fetching query!", err.stack);
   }
-  else{
-    quiz=res.rows;
+  else {
+    quiz = res.rows;
   }
   db.end();
 });
